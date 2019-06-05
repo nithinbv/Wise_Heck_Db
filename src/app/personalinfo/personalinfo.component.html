@@ -1,0 +1,290 @@
+<article id="post-1428" class="post-1428 page type-page status-publish hentry">
+  <div class="entry-content">
+    <style text="text/css">
+      .interaction-form label {
+        color: #404040;
+        display: block;
+      }
+
+      .interaction-form label.error {
+        color: #900;
+        display: inline-block;
+        padding: 0 10px;
+      }
+
+      .interaction-form .field {
+        padding: 4px 0;
+      }
+
+      .interaction-form .field .required-star {
+        color: #aa0000;
+        display: inline-block;
+        margin-left: 5px;
+      }
+
+      .interaction-form .field .checkboxes {
+        max-width: 275px;
+        border: 1px solid #a9a9a9;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+
+      .interaction-form .field .checkbox {
+        display: block;
+        position: relative;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 30px;
+        line-height: 26px;
+        padding: 2px 28px 2px 8px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: #404040;
+        overflow: hidden;
+        text-decoration: none;
+      }
+
+      .interaction-form .field .checkbox input {
+        opacity: 0.01;
+        position: absolute;
+        left: -50px;
+        z-index: -5;
+      }
+
+      .interaction-form .field .checkbox:last-child {
+        border-bottom: none;
+      }
+
+      .interaction-form .field .checkbox.selected {
+        background: rgb(50, 142, 253);
+        color: #fff;
+      }
+
+      .interaction-form .field .checkbox.selected:before {
+        color: #fff;
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.25);
+        line-height: 30px;
+        position: absolute;
+        right: 10px;
+      }
+
+      .interaction-form .field.radio input,
+      .interaction-form .field.checkbox input {
+        width: auto;
+        margin-left: 0;
+      }
+
+      .interaction-form .section.consent .field.checkbox:not(.consent-all) {
+        margin-left: 20px;
+      }
+
+      .interaction-form .field input,
+      .interaction-form .field select,
+      .interaction-form .field textarea {
+        padding: 4px;
+        max-width: 275px;
+        width: 96%;
+      }
+
+      .interaction-form .field textarea.international {
+        height: 120px;
+      }
+
+      .interaction-form .errors {
+        border: 1px solid #900;
+        color: #900;
+        padding: 10px;
+      }
+
+      .interaction-form .hidden {
+        display: none;
+      }
+
+      .btn-group .btn-submit-email {
+        padding: 4px 10px;
+      }
+
+      input,
+      select,
+      textarea,
+      button {
+        font-family: inherit;
+      }
+    </style>
+    <div id="interaction-form-container">
+      <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+        <div class="errors hidden"></div>
+        <div class="section contact">
+          <h3>Contact Information</h3>
+          <div class="field text first-name required">
+            <label for="first-name">
+              <span class="label">First Name</span>
+              <span class="required-star">*</span>
+            </label>
+            <input
+              id="first-name"
+              name="first-name"
+              class="required"
+              type="text"
+              formControlName="firstname"
+            />
+          </div>
+          <div class="field text last-name required">
+            <label for="last-name">
+              <span class="label">Last Name</span>
+              <span class="required-star">*</span>
+            </label>
+            <input
+              id="last-name"
+              name="last-name"
+              class="required"
+              type="text"
+              formControlName="lastname"
+            />
+          </div>
+          <div class="field email email-address required">
+            <label for="email-address">
+              <span class="label">Email</span>
+              <span class="required-star">*</span>
+            </label>
+            <input
+              id="email-address"
+              name="email-address"
+              class="email required"
+              type="email"
+              placeholder="someone@website.com"
+              formControlName="email"
+            />
+          </div>
+          <div class="field tel phone-number">
+            <label for="phone-number">
+              <span class="label">Phone</span>
+            </label>
+            <input
+              id="phone-number"
+              name="phone-number"
+              class="phoneUS"
+              type="tel"
+              formControlName="phone"
+            />
+          </div>
+        </div>
+        <div class="section contact">
+          <h3>Certification Detail</h3>
+          <div class="field text first-name required">
+            <label for="first-name">
+              <span class="label">Student Id</span>
+            </label>
+            <input
+              id="first-name"
+              name="first-name"
+              class="required"
+              type="text"
+              formControlName="studentId"
+            />
+          </div>
+          <div class="field email email-address required">
+            <label for="email-address">
+              <span class="label">High School</span>
+            </label>
+            <input
+              id="first-name"
+              name="first-name"
+              class="required"
+              type="text"
+              formControlName="highSchool"
+            />
+          </div>
+          <div class="field tel phone-number">
+            <label for="phone-number">
+              <span class="label">Year Passed</span>
+            </label>
+            <input
+              id="phone-number"
+              name="phone-number"
+              class="phoneUS"
+              type="number"
+              formControlName="yearPassed"
+              maxlength="4"
+            />
+          </div>
+        </div>
+        <div class="section contact">
+          <h3>Education</h3>
+          <div class="field text first-name required">
+            <label for="first-name">
+              <span class="label">Level of SD</span>
+            </label>
+            <input
+              id="first-name"
+              name="first-name"
+              class="required"
+              type="text"
+              formControlName="levelOfSd"
+            />
+          </div>
+          <div class="field text last-name required">
+            <label for="last-name">
+              <span class="label">Collage/School</span>
+            </label>
+            <input
+              id="last-name"
+              name="last-name"
+              class="required"
+              type="text"
+              formControlName="collage"
+            />
+          </div>
+          <div class="field email email-address required">
+            <label for="email-address">
+              <span class="label">Graduation Year</span>
+            </label>
+            <input
+              id="email-address"
+              name="email-address"
+              class="email required"
+              type="number"
+              formControlName="yearGraduation"
+              maxlength="4"
+            />
+          </div>
+        </div>
+        <div class="section contact">
+          <h3>Current Employer</h3>
+          <div class="field text first-name required">
+            <label for="first-name">
+              <span class="label">Organization Name</span>
+            </label>
+            <input
+              id="first-name"
+              name="first-name"
+              class="required"
+              type="text"
+              formControlName="organization"
+            />
+          </div>
+          <div class="field text last-name required">
+            <label for="last-name">
+              <span class="label">Job Title</span>
+            </label>
+            <input
+              id="last-name"
+              name="last-name"
+              class="required"
+              type="text"
+              formControlName="jobTitle"
+            />
+          </div>
+        </div>
+        <div class="btn-group">
+          <input
+            class="btn btn-submit btn-submit-interaction"
+            type="submit"
+            value="Submit"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- .entry-content -->
+</article>
