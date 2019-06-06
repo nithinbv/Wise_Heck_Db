@@ -2,8 +2,9 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { ChartModule } from "angular-highcharts";
 import { AppComponent } from "./app.component";
+import { ChartModule } from 'angular-highcharts';
+
 
 import { HomeComponent } from "../app/home/home.component";
 import { PersonalInfoComponent } from "../app/personalinfo/personalinfo.component";
@@ -26,6 +27,7 @@ import { DashboardService } from "../app/dashboard/dashbaord.service";
     SurveyComponent,
     DashboardComponent,
     PreferencesComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { DashboardService } from "../app/dashboard/dashbaord.service";
     ReactiveFormsModule,
     HttpClientModule,
     ChartModule
+    
   ],
   providers: [
     PersonalInfoService,

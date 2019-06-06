@@ -112,61 +112,38 @@
       }
     </style>
     <div id="interaction-form-container">
-      <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+    
         <div class="errors hidden"></div>
         <div class="section contact">
-          <div class="field text first-name required">
-            <label for="first-name">
-              <span class="label">Voluntering</span>
-              <span class="required-star">*</span>
-            </label>
-            <input
-              id="first-name"
-              name="first-name"
-              class="required"
-              type="text"
-              formControlName="firstname"
-            />
-          </div>
-          <div class="field text last-name required">
-            <label for="last-name">
-              <span class="label">News Letter</span>
-              <span class="required-star">*</span>
-            </label>
-            <input
-              id="last-name"
-              name="last-name"
-              class="required"
-              type="text"
-              formControlName="lastname"
-            />
-          </div>
-          <div class="field email email-address required">
-            <label for="email-address">
-              <span class="label">Event Alert</span>
-              <span class="required-star">*</span>
-            </label>
-            <input
-              id="email-address"
-              name="email-address"
-              class="email required"
-              type="email"
-              placeholder="someone@website.com"
-              formControlName="email"
-            />
-          </div>
-          <div class="field tel phone-number">
-            <label for="phone-number">
-              <span class="label">Articles/Offer</span>
-            </label>
-            <input
-              id="phone-number"
-              name="phone-number"
-              class="phoneUS"
-              type="tel"
-              formControlName="phone"
-            />
-          </div>
+         
+              <div class="field checkbox recurring">
+                <label for="recurring">
+                  <input id="recurring" name="recurring" type="checkbox"  >
+                  <span class="label">Voluntering</span>
+                </label>
+              </div>
+
+              <div class="field checkbox recurring">
+                  <label for="recurring">
+                    <input id="recurring" name="recurring" type="checkbox" maxlength="255">
+                    <span class="label">News Letter</span>
+                  </label>
+                </div>
+
+                <div class="field checkbox recurring">
+                    <label for="recurring">
+                      <input id="recurring" name="recurring" type="checkbox" maxlength="255">
+                      <span class="label">Event Alert</span>
+                    </label>
+                  </div>
+
+                  <div class="field checkbox recurring">
+                      <label for="recurring">
+                        <input id="recurring" name="recurring" type="checkbox" maxlength="255">
+                        <span class="label">Articles/Offer</span>
+                      </label>
+                    </div>
+            
         </div>
         <div class="btn-group">
           <input
@@ -175,7 +152,7 @@
             value="Submit"
           />
         </div>
-      </form>
+    
     </div>
   </div>
   <!-- .entry-content -->
