@@ -13,9 +13,7 @@ export class DashboardComponent {
       text: 'Solar Employment Growth by Sector, 2010-2016'
   },
 
-  subtitle: {
-      text: 'Source: thesolarfoundation.com'
-  },
+ 
 
   yAxis: {
       title: {
@@ -82,9 +80,7 @@ export class DashboardComponent {
    title: {
       text: 'Monthly Average Rainfall'
    },
-   subtitle:{
-      text: 'Source: WorldClimate.com' 
-   },
+  
    xAxis:{
       categories: ['Jan','Feb','Mar','Apr','May','Jun','Jul',
       'Aug','Sep','Oct','Nov','Dec'],
